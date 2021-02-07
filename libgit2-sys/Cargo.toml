@@ -41,4 +41,5 @@ ssh_key_from_memory = []
 # just require libssh2 when using zlib-ng-compat. This will require building
 # libssh2, but it will not add code to the final binary without the "ssh"
 # feature enabled.
-zlib-ng-compat = ["libz-sys/zlib-ng", "libssh2-sys/zlib-ng-compat"]
+# don't require libssh2, since we don't need it, and it doesn't cross-compile on github actions
+zlib-ng-compat = ["libz-sys/zlib-ng"]
